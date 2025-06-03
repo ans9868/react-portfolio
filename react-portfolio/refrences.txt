@@ -1,0 +1,12 @@
+reactfolio:
+https://github.com/ans9868/portfolio?tab=readme-ov-file
+https://reactfolio.tharindu.dev/
+
+julia-portfolio
+https://github.com/codewithsadee/julia-portfolio?tab=readme-ov-file
+https://codewithsadee.github.io/julia-portfolio/
+
+pfolio-kane-williams
+https://github.com/codewithsadee/pfolio
+https://codewithsadee.github.io/pfolio/
+
