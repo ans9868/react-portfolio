@@ -58,9 +58,9 @@ export default function About() {
           <strong><a href="https://engineering.nyu.edu/life-tandon/tandon-career-hub/resources-students/data-science-bootcamp" target="_blank" rel="noopener noreferrer">Data Science Bootcamp Certificate (NYU Tandon)</a></strong>.
           <br /><br />
           Why do I keep chasing certificates? Because they <em>force</em> me to work on the fundamentals I'd otherwise ignore. For example, in the
-          Fullstack course, I tackled the "unsexy" topic of unit testing. Let me say that it was by far one of my least favorite topics in the course but now it's by far my most distinguished skill. Unit testing, along with the test first mentality has helped me catch a lot of bugs of my own code and my coworkers' which I then make them fix. I think its an expecially important skill now, when we increasingly depend on AI-generated code which might not be as reliable as we think.
+          Fullstack course, I tackled the "unsexy" topic of unit testing. Let me say that it was by far one of my least favorite topics in the course but now it's by far my most distinguished skill. Unit testing, along with the test first mentality has helped me catch a lot of bugs of my own code and my coworkers' which helps me from fixing their code later ;). I think its an expecially important skill now, when we increasingly depend on AI-generated code which might not be as reliable as we think.
           <br /><br />
-          Overall these structured learning paths keep me grounded, give me time to explore my interests, and push me to build the kind of software I actually believe in.
+          Overall these structured learning paths keep me grounded, give me time to explore my interests, and push me to build the kind of software I actually believe in. Go do checkout my projects.
         </p>
       </div>
       <div className="about-right">
@@ -107,9 +107,9 @@ export default function About() {
               <div className="bar-fill cpp" style={{width: `${productivity.cpp}%`}}></div>
             </div>
           </div>
-        </div>
-        <div style={{margin: '1.5rem 0 1rem 0', color: '#888', fontSize: '0.98rem', fontStyle: 'italic'}}>
-          * Remember Bjarne Stroustrup (the founder of C++) rates himself a 7/10 in C++
+          <div className="skill-bar skill-note">
+            * If Bjarne Stroustrup — the creator of C++ — rates himself a 7/10 in C++, I'm not sure I have any business claiming anything higher.
+          </div>
         </div>
         <div className="coffee-slider-section coffee">
           <label htmlFor="coffee-slider">Number of cups of coffee I have had today: <b>{coffee}</b></label>
