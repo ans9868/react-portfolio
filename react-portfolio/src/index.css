@@ -251,6 +251,7 @@ main {
 
 .coffee-slider-section.coffee, .coffee-slider-section.imposter {
   max-width: 500px;
+  width: 100%;
   margin: 2.5rem 0 0 0;
   padding: 0;
   text-align: left;
@@ -275,3 +276,76 @@ main {
   accent-color: #b39ddb;
   height: 4px;
 }
+
+.about-two-col {
+  display: flex;
+  align-items: flex-start;
+  gap: 3rem;
+  margin-top: 15.5rem;
+}
+.about-left {
+  flex: 1.2;
+  min-width: 320px;
+  text-align: left;
+}
+.about-title {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #3a4251;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.about-desc {
+  font-size: 1.25rem;
+  color: #555c6a;
+  line-height: 1.6;
+  margin-bottom: 0;
+  text-align: left;
+}
+.about-right {
+  flex: 1;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.skills-section {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+.skill-bar {
+  margin-bottom: 1.3rem;
+  width: 100%;
+}
+.skill-label {
+  font-size: 1.05rem;
+  color: #555;
+  font-weight: 600;
+  float: left;
+}
+.skill-value {
+  float: right;
+  font-size: 1.05rem;
+  color: #6c757d;
+  font-weight: 600;
+}
+.bar-bg {
+  clear: both;
+  background: #f2f2f2;
+  border-radius: 6px;
+  height: 7px;
+  margin-top: 6px;
+  width: 100%;
+  overflow: hidden;
+}
+.bar-fill {
+  height: 100%;
+  border-radius: 6px;
+  transition: width 1s cubic-bezier(.4,0,.2,1);
+}
+.bar-fill.js { background: #b39ddb; }
+.bar-fill.python { background: #90caf9; }
+.bar-fill.pyspark { background: #80cbc4; }
+.bar-fill.ml { background: #ffd54f; }
+.bar-fill.fullstack { background: #aed581; }
+.bar-fill.cpp { background: #ef9a9a; }
