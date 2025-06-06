@@ -1,0 +1,61 @@
+.contact {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background-color: var(--background-color);
+}
+
+.contact-container {
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+}
+
+.contact h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+}
+
+.contact-desc {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 3rem;
+  color: var(--text-color);
+}
+
+.hero-socials {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.hero-socials a {
+  transition: transform 0.3s ease;
+}
+
+.hero-socials a:hover {
+  transform: translateY(-5px);
+}
+
+.hero-socials img {
+  width: 32px;
+  height: 32px;
+}
+
+@media (max-width: 768px) {
+  .hero-socials {
+    gap: 1.5rem;
+  }
+  
+  .contact h1 {
+    font-size: 2rem;
+  }
+  
+  .contact-desc {
+    font-size: 1rem;
+  }
+} 
