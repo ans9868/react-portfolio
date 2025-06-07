@@ -256,6 +256,8 @@ main {
   padding: 0;
   text-align: left;
 }
+
+
 .coffee-slider-section.coffee label,
 .coffee-slider-section.imposter label {
   font-size: 1.1rem;
@@ -391,8 +393,10 @@ main {
   color: #888;
   font-size: 0.98rem;
   font-style: italic;
+  margin-top: 0.5rem;
   margin-bottom: 1.5rem;
   background: none;
   box-shadow: none;
   padding: 0;
+  text-align: left;
 }
