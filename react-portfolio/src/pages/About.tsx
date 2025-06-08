@@ -5,10 +5,10 @@ export default function About() {
   const [imposter, setImposter] = useState(0);
   const [productivity, setProductivity] = useState({
     js: 30,
-    python: 30,
-    pyspark: 30,
+    python: 55,
+    pyspark: 40,
     ml: 30,
-    fullstack: 30,
+    fullstack: 60,
     cpp: 30,
   });
 
@@ -16,17 +16,17 @@ export default function About() {
     // Normalize sliders: coffee 1-10 -> 0-1, imposter 0-100 -> 0-1
     const xCoffee = (coffeeValue - 1) / 9;
     const xImposter = imposterValue / 100;
-    // Use cos(20x) and sin(20x) for erratic effect, scale to [10, 60]
-    function meter(val: number) {
-      return 35 + 25 * val; // scale [-1,1] to [10,60]
+    // Each skill oscillates around its base value
+    function osc(base: number, amp: number, phase: number) {
+      return base + amp * (Math.cos(20 * xCoffee + phase) + Math.sin(20 * xImposter + phase));
     }
     setProductivity({
-      js: Math.max(10, Math.min(60, meter(Math.cos(20 * xCoffee) + Math.sin(20 * xImposter)))),
-      python: Math.max(10, Math.min(60, meter(Math.cos(20 * xCoffee + 1) + Math.sin(20 * xImposter + 1)))),
-      pyspark: Math.max(10, Math.min(60, meter(Math.cos(20 * xCoffee + 2) + Math.sin(20 * xImposter + 2)))),
-      ml: Math.max(10, Math.min(60, meter(Math.cos(20 * xCoffee + 3) + Math.sin(20 * xImposter + 3)))),
-      fullstack: Math.max(10, Math.min(60, meter(Math.cos(20 * xCoffee + 4) + Math.sin(20 * xImposter + 4)))),
-      cpp: Math.max(10, Math.min(60, meter(Math.cos(20 * xCoffee + 5) + Math.sin(20 * xImposter + 5)))),
+      fullstack: Math.max(10, Math.min(60, osc(60, 5, 0))),
+      python: Math.max(10, Math.min(60, osc(55, 5, 1))),
+      pyspark: Math.max(10, Math.min(60, osc(40, 5, 2))),
+      ml: Math.max(10, Math.min(60, osc(30, 5, 3))),
+      js: Math.max(10, Math.min(60, osc(50, 5, 4))),
+      cpp: Math.max(10, Math.min(60, osc(30, 5, 5))),
     });
   }
 
