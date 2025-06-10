@@ -411,11 +411,13 @@ main {
 .project-card {
   background: #fff;
   border-radius: 1rem;
-  padding: 1.5rem;
+  padding: clamp(1rem, 3vw, 1.5rem);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s, box-shadow 0.2s;
-  max-width: 350px;
-  margin: 1rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .project-card:hover {
@@ -424,16 +426,17 @@ main {
 }
 
 .project-title {
-  font-size: 1.5rem;
+  font-size: clamp(1.25rem, 3vw, 1.5rem);
   color: #2d3748;
   margin-bottom: 0.75rem;
 }
 
 .project-description {
   color: #4a5568;
-  font-size: 1rem;
+  font-size: clamp(0.875rem, 2vw, 1rem);
   line-height: 1.5;
   margin-bottom: 1rem;
+  flex-grow: 1;
 }
 
 .project-technologies {
@@ -448,8 +451,9 @@ main {
   color: #4a5568;
   padding: 0.25rem 0.75rem;
   border-radius: 1rem;
-  font-size: 0.875rem;
+  font-size: clamp(0.75rem, 1.5vw, 0.875rem);
   font-weight: 500;
+  white-space: nowrap;
 }
 
 .project-link {
@@ -466,15 +470,16 @@ main {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  padding: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr));
+  gap: clamp(1rem, 3vw, 2rem);
+  padding: clamp(1rem, 3vw, 2rem);
   max-width: 1200px;
   margin: 0 auto;
+  width: 100%;
 }
 
 .projects-section {
-  padding: 2rem 0;
+  padding: 0rem 0 2rem 0;
 }
 
 .projects-title {
@@ -497,4 +502,27 @@ main {
 .page-header p {
   margin: 0;
   padding: 0;
+}
+
+@media (max-width: 850px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .project-card {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-grid {
+    gap: 0.75rem;
+    padding: 0.75rem;
+  }
+  
+  .project-card {
+    padding: 1rem;
+  }
 }

@@ -1,78 +1,80 @@
 .navbar {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
   background: #fff;
   border-radius: 0.5rem;
   box-shadow: 0 2px 12px 0 rgba(0,0,0,0.07);
-  padding: 1.5rem;
+  padding: 1rem 2rem;
   margin: 0 auto;
   width: 100%;
-  max-width: 1000px;
+  max-width: 1200px;
   min-width: 320px;
   position: sticky;
+  top: 1rem;
   z-index: 1000;
-  transition: max-width 0.2s, padding 0.2s;
+  transition: all 0.3s ease;
 }
 
 .logo {
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 4vw, 2rem);
   font-weight: 800;
   color: #2d3748;
   letter-spacing: -1px;
   text-align: left;
-  grid-column: 1;
-  justify-self: start;
 }
 
 .navlinks {
   display: flex;
   justify-content: center;
-  gap: 2.5rem;
-  grid-column: 2;
+  gap: clamp(1rem, 3vw, 2.5rem);
+  align-items: center;
 }
 
 .navlink {
   color: #2d3748;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: clamp(0.875rem, 2vw, 1rem);
   text-decoration: none;
   padding: 0.25rem 0;
   transition: color 0.2s;
+  white-space: nowrap;
 }
 
 .active {
   color: #1ccfc9;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 768px) {
   .navbar {
-    max-width: 95vw;
-    padding-left: 2vw;
-    padding-right: 2vw;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+    top: 0;
+  }
+
+  .navlinks {
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .navlink {
+    font-size: 0.875rem;
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 480px) {
   .navbar {
-    grid-template-columns: 1fr;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 1rem 1vw;
-    max-width: 99vw;
-    position: relative;
-    top: 0;
+    padding: 0.75rem;
   }
-  .logo {
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-    grid-column: 1;
-    justify-self: start;
-  }
+
   .navlinks {
-    justify-content: flex-start;
-    gap: 1.5rem;
-    width: 100%;
-    grid-column: 1;
+    gap: 0.5rem;
+  }
+
+  .navlink {
+    font-size: 0.75rem;
   }
 } 
