@@ -1,4 +1,3 @@
-import React from 'react';
 import profile from '../assets/p2.png';
 import github from '../assets/logos/github.png';
 import medium from '../assets/logos/medium1.0.png';

@@ -1,4 +1,3 @@
-import React from 'react';
 import medium1 from '../assets/logos/medium1.0.png';
 import youtube from '../assets/logos/youtube.png';
 
