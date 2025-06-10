@@ -12,22 +12,44 @@ export default function About() {
     cpp: 30,
   });
 
+  function randomProductivity() {
+    return {
+      fullstack: Math.floor(Math.random() * 51) + 10, // 10-60
+      python: Math.floor(Math.random() * 51) + 10,
+      pyspark: Math.floor(Math.random() * 51) + 10,
+      ml: Math.floor(Math.random() * 51) + 10,
+      js: Math.floor(Math.random() * 51) + 10,
+      cpp: Math.floor(Math.random() * 51) + 10,
+    };
+  }
+
   function updateProductivity(coffeeValue: number, imposterValue: number) {
-    // Normalize sliders: coffee 1-10 -> 0-1, imposter 0-100 -> 0-1
-    const xCoffee = (coffeeValue - 1) / 9;
-    const xImposter = imposterValue / 100;
-    // Each skill oscillates around its base value
-    function osc(base: number, amp: number, phase: number) {
-      return base + amp * (Math.cos(20 * xCoffee + phase) + Math.sin(20 * xImposter + phase));
+    // Preset: coffee=1, imposter=0
+    if (coffeeValue === 1 && imposterValue === 0) {
+      setProductivity({
+        js: 30,
+        python: 55,
+        pyspark: 40,
+        ml: 30,
+        fullstack: 60,
+        cpp: 30,
+      });
+      return;
     }
-    setProductivity({
-      fullstack: Math.max(10, Math.min(60, osc(60, 5, 0))),
-      python: Math.max(10, Math.min(60, osc(55, 5, 1))),
-      pyspark: Math.max(10, Math.min(60, osc(40, 5, 2))),
-      ml: Math.max(10, Math.min(60, osc(30, 5, 3))),
-      js: Math.max(10, Math.min(60, osc(50, 5, 4))),
-      cpp: Math.max(10, Math.min(60, osc(30, 5, 5))),
-    });
+    // Preset: coffee=1, imposter=100
+    if (coffeeValue === 1 && imposterValue === 100) {
+      setProductivity({
+        js: 45,
+        python: 40,
+        pyspark: 35,
+        ml: 35,
+        fullstack: 55,
+        cpp: 30,
+      });
+      return;
+    }
+    // Otherwise, set random values
+    setProductivity(randomProductivity());
   }
 
   function handleCoffeeSlider(e: React.ChangeEvent<HTMLInputElement>) {
