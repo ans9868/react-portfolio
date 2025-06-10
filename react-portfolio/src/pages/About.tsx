@@ -51,19 +51,33 @@ export default function About() {
           <p className="about-desc">
              I am very curious and a very quick learner. Sometimes I get so excited about a new idea that I just have to try it out.
             
-          </p> Currently, I'm studying Computer Science at <strong>NYU Tandon School of Engineering</strong> and will be graduating in May of 2026.
+          </p> Currently, I'm studying Computer Science at&nbsp;
+          <strong>
+              NYU Tandon School of Engineering
+          </strong>
+          , where I will be graduating in May of 2026. (That's on time—which which is a miracle. Classes are hard + we get no vacation. Only half of my class is graduating on time—
+          <a
+            href="https://engineering.nyu.edu/about/assessment-and-institutional-research/abet-graduation-retention-and-enrollment#graduation-rates"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ fontWeight: 400 }}
+          >
+            literally
+          </a>
+          .)
             <br /><br />
             I hold a couple of certificates I am proud of:&nbsp;
             <strong><a href="https://fullstackopen.com/en/" target="_blank" rel="noopener noreferrer">Full Stack Web Development Certificate (University of Helsinki)</a></strong> 
              &nbsp;and&nbsp;
             <strong><a href="https://engineering.nyu.edu/life-tandon/tandon-career-hub/resources-students/data-science-bootcamp" target="_blank" rel="noopener noreferrer">Data Science Bootcamp Certificate (NYU Tandon)</a></strong>.
+            Both of them were pretty tough, but we did it 🥳.
             <br /><br />
           </p>
         </div>
         <div className="about-right">
           <div className="skills-section">
             <div className="skill-bar">
-              <span className="skill-label">Full-stack web-dev</span>
+              <span className="skill-label">Full Stack Web Development</span>
               <span className="skill-value">{productivity.fullstack.toFixed(1)}%</span>
               <div className="bar-bg">
                 <div className="bar-fill fullstack" style={{width: `${productivity.fullstack}%`}}></div>
