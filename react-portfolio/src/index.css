@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 :root {
   font-family: 'Manrope', sans-serif;
   line-height: 1.5;
@@ -126,7 +132,7 @@ button:focus-visible {
   align-items: center;
   justify-content: flex-start;
   gap: 4rem;
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 
 .hero-text {
@@ -168,7 +174,7 @@ main {
   min-height: 80vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  padding-top: 2rem;
 }
 
 .avatar-row {
@@ -283,7 +289,7 @@ main {
   display: flex;
   align-items: flex-start;
   gap: 3rem;
-  margin-top: 15.5rem;
+  margin-top: 2rem;
 }
 .about-left {
   flex: 1.2;
@@ -354,7 +360,7 @@ main {
 
 .contact-section {
   max-width: 600px;
-  margin: 5rem auto 0 auto;
+  margin: 2rem auto 0 auto;
   padding: 2.5rem 2rem;
   background: #fff;
   border-radius: 1.2rem;
@@ -399,4 +405,96 @@ main {
   box-shadow: none;
   padding: 0;
   text-align: left;
+}
+
+/* Project Card Styles */
+.project-card {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  max-width: 350px;
+  margin: 1rem;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.project-title {
+  font-size: 1.5rem;
+  color: #2d3748;
+  margin-bottom: 0.75rem;
+}
+
+.project-description {
+  color: #4a5568;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.project-technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.technology-tag {
+  background: #edf2f7;
+  color: #4a5568;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.project-link {
+  display: inline-block;
+  color: #1ccfc9;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.project-link:hover {
+  color: #13b3ae;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.projects-section {
+  padding: 2rem 0;
+}
+
+.projects-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #2d3748;
+  margin-bottom: 3rem;
+}
+
+/* index.css or a new file like src/styles/utilities.css */
+.page-content {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 0rem;
+  padding-bottom: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.page-header p {
+  margin: 0;
+  padding: 0;
 }
