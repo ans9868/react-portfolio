@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import profile from '../assets/p2.png';
 import github from '../assets/logos/github.png';
+import medium from '../assets/logos/medium1.0.png';
 import linkedin from '../assets/logos/linkedin.png';
 import email from '../assets/logos/email.png';
 import youtube from '../assets/logos/youtube.png';
@@ -23,6 +24,7 @@ export default function Home() {
           </p>
           <div className="hero-socials">
             <a href="https://github.com/ans9868" target="_blank" rel="noopener noreferrer"><img src={github} alt="GitHub" /></a>
+            <a href="https://medium.com/@adelnsahuc" target="_blank" rel="noopener noreferrer"><img src={medium} alt="Medium" /></a>
             <a href="https://www.linkedin.com/in/adel-sahuc-7098791a8/" target="_blank" rel="noopener noreferrer"><img src={linkedin} alt="LinkedIn" /></a>
             <a href="mailto:adel@sahuc.net" target="_blank" rel="noopener noreferrer"><img src={email} alt="Email" /></a>
             <a href="https://www.youtube.com/@AdelNour333" target="_blank" rel="noopener noreferrer"><img src={youtube} alt="YouTube" /></a>

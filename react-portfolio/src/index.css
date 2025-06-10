@@ -206,12 +206,14 @@ main {
 .hero-socials img {
   width: 32px;
   height: 32px;
-  filter: grayscale(1) brightness(0.6);
   transition: filter 0.2s, transform 0.2s;
 }
 .hero-socials a:hover img {
-  filter: grayscale(0) brightness(1) drop-shadow(0 2px 8px #ffe06644);
+  filter: drop-shadow(0 2px 8px #ffe06644);
   transform: translateY(-2px) scale(1.08);
+}
+.hero-socials img[alt="Medium"] {
+  border-radius: 20%;
 }
 
 /* Skills Bars Section */
@@ -387,12 +389,14 @@ main {
 .contact-socials img {
   width: 32px;
   height: 32px;
-  filter: grayscale(1) brightness(0.6);
   transition: filter 0.2s, transform 0.2s;
 }
 .contact-socials a:hover img {
-  filter: grayscale(0) brightness(1) drop-shadow(0 2px 8px #ffe06644);
+  filter: drop-shadow(0 2px 8px #ffe06644);
   transform: translateY(-2px) scale(1.08);
+}
+.contact-socials img[alt="Medium"] {
+  border-radius: 20%;
 }
 
 .skill-bar.skill-note {
