@@ -74,8 +74,14 @@ export default function About() {
              I am very curious and a very quick learner. Sometimes I get so excited about a new idea that I just have to try it out.
             
           </p> Currently, I'm studying Computer Science at&nbsp;
-          <strong>
-              NYU Tandon School of Engineering
+          <strong className="extra-bold">
+              <a
+                href="https://engineering.nyu.edu/about/assessment-and-institutional-research/abet-graduation-retention-and-enrollment#graduation-rates"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                NYU Tandon School of Engineering
+              </a>
           </strong>
           , where I will be graduating in May of 2026. (That's on time—which which is a miracle. Classes are hard + we get no vacation. Only half of my class is graduating on time—
           <a
@@ -147,7 +153,9 @@ export default function About() {
             </div>
           </div>
           <div className="coffee-slider-section coffee">
-            <label htmlFor="coffee-slider">Number of cups of coffee I have had today: <b>{coffee}</b></label>
+            <label htmlFor="coffee-slider" className="skill-label">
+              Number of cups of coffee I have had today: <b>{coffee}</b>
+            </label>
             <input
               id="coffee-slider"
               type="range"
@@ -159,7 +167,9 @@ export default function About() {
             />
           </div>
           <div className="coffee-slider-section imposter">
-            <label htmlFor="imposter-slider">Imposter syndrome slider: <b>{imposter.toFixed(1)}%</b></label>
+            <label htmlFor="imposter-slider" className="skill-label">
+              Imposter syndrome slider: <b>{imposter.toFixed(1)}%</b>
+            </label>
             <input
               id="imposter-slider"
               type="range"

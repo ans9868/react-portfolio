@@ -21,8 +21,8 @@ export default function Contact() {
           {/* <a href="https://medium.com/@adelnsahuc" target="_blank" rel="noopener noreferrer"><img src={medium1} alt="Medium" /></a> */}
           <a href="https://medium.com/@adelnsahuc" target="_blank" rel="noopener noreferrer"><img src={medium1} alt="Medium" /></a>
           <a href="https://www.linkedin.com/in/adel-sahuc-7098791a8/" target="_blank" rel="noopener noreferrer"><img src={linkedin} alt="LinkedIn" /></a>
-          <a href="mailto:adel@sahuc.net" target="_blank" rel="noopener noreferrer"><img src={email} alt="Email" /></a>
           <a href="https://www.youtube.com/@AdelNour333" target="_blank" rel="noopener noreferrer"><img src={youtube} alt="YouTube" /></a>
+          <a href="mailto:adel@sahuc.net" target="_blank" rel="noopener noreferrer"><img src={email} alt="Email" /></a>
         </div>
       </section>
     </div>
