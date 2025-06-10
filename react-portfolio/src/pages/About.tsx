@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 export default function About() {
   const [coffee, setCoffee] = useState(1);
-  const [imposter, setImposter] = useState(0);
+  const [wizardry, setWizardry] = useState(0);
   const [productivity, setProductivity] = useState({
     js: 30,
     python: 55,
@@ -23,9 +23,9 @@ export default function About() {
     };
   }
 
-  function updateProductivity(coffeeValue: number, imposterValue: number) {
-    // Preset: coffee=1, imposter=0
-    if (coffeeValue === 1 && imposterValue === 0) {
+  function updateProductivity(coffeeValue: number, wizardryValue: number) {
+    // Preset: coffee=1, wizardry=0
+    if (coffeeValue === 1 && wizardryValue === 0) {
       setProductivity({
         js: 30,
         python: 55,
@@ -36,8 +36,8 @@ export default function About() {
       });
       return;
     }
-    // Preset: coffee=1, imposter=100
-    if (coffeeValue === 1 && imposterValue === 100) {
+    // Preset: coffee=1, wizardry=100
+    if (coffeeValue === 1 && wizardryValue === 100) {
       setProductivity({
         js: 45,
         python: 40,
@@ -55,12 +55,12 @@ export default function About() {
   function handleCoffeeSlider(e: React.ChangeEvent<HTMLInputElement>) {
     const value = parseInt(e.target.value, 10);
     setCoffee(value);
-    updateProductivity(value, imposter);
+    updateProductivity(value, wizardry);
   }
 
-  function handleImposterSlider(e: React.ChangeEvent<HTMLInputElement>) {
+  function handleWizardrySlider(e: React.ChangeEvent<HTMLInputElement>) {
     const value = parseFloat(e.target.value);
-    setImposter(value);
+    setWizardry(value);
     updateProductivity(coffee, value);
   }
 
@@ -149,7 +149,7 @@ export default function About() {
             <div className="skill-bar skill-note">
               * If Bjarne Stroustrup — the creator of C++ — rates himself a 7/10 in C++, I'm not sure I have any business claiming anything higher.
               <br></br>
-              * I'm optimal at 1 cup of coffee and 100% imposter syndrome.
+              * I'm optimal at 1 cup of coffee and 100% wizardry.
             </div>
           </div>
           <div className="coffee-slider-section coffee">
@@ -166,18 +166,18 @@ export default function About() {
               className="coffee-slider"
             />
           </div>
-          <div className="coffee-slider-section imposter">
-            <label htmlFor="imposter-slider" className="skill-label">
-              Imposter syndrome slider: <b>{imposter.toFixed(1)}%</b>
+          <div className="coffee-slider-section wizardry">
+            <label htmlFor="wizardry-slider" className="skill-label">
+              Wizardry Level: <b>{wizardry.toFixed(1)}%</b>
             </label>
             <input
-              id="imposter-slider"
+              id="wizardry-slider"
               type="range"
               min="0"
               max="100"
               step="0.5"
-              value={imposter}
-              onChange={handleImposterSlider}
+              value={wizardry}
+              onChange={handleWizardrySlider}
               className="coffee-slider"
             />
           </div>

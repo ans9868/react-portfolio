@@ -258,14 +258,13 @@ main {
 .bar-fill.fullstack { width: 90%; background: #aed581; }
 .bar-fill.cpp { width: 75%; background: #ef9a9a; }
 
-.coffee-slider-section.coffee, .coffee-slider-section.imposter {
+.coffee-slider-section.coffee, .coffee-slider-section.imposter, .coffee-slider-section.wizardry {
   max-width: 500px;
   width: 100%;
   margin: 2.5rem 0 0 0;
   padding: 0;
   text-align: left;
 }
-
 
 .coffee-slider-section.coffee label,
 .coffee-slider-section.imposter label {
@@ -277,6 +276,15 @@ main {
 }
 .coffee-slider-section.coffee .coffee-slider,
 .coffee-slider-section.imposter .coffee-slider {
+  width: 100%;
+  margin-top: 0.0rem;
+  margin-bottom: 0.0rem;
+  accent-color: #b39ddb;
+  height: 24px;
+  padding-bottom: 0.5rem;
+  box-sizing: content-box;
+}
+.coffee-slider-section.wizardry .coffee-slider {
   width: 100%;
   margin-top: 0.0rem;
   margin-bottom: 0.0rem;
