@@ -272,20 +272,18 @@ main {
   font-size: 1.1rem;
   color: #444;
   font-weight: 600;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.0rem;
   display: block;
 }
-.coffee-slider-section.coffee .coffee-slider {
-  width: 100%;
-  margin-top: 0.7rem;
-  accent-color: #b39ddb;
-  height: 5px;
-}
+.coffee-slider-section.coffee .coffee-slider,
 .coffee-slider-section.imposter .coffee-slider {
   width: 100%;
-  margin-top: 0.5rem;
+  margin-top: 0.0rem;
+  margin-bottom: 0.0rem;
   accent-color: #b39ddb;
-  height: 4px;
+  height: 24px;
+  padding-bottom: 0.5rem;
+  box-sizing: content-box;
 }
 
 .about-two-col {
