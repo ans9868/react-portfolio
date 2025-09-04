@@ -1,3 +1,7 @@
+I should add this to have my medium articles in the blog tab:
+https://javascript.plainenglish.io/how-i-successfully-added-medium-blogs-to-my-website-abafd76c4182
+
+
 reactfolio:
 https://github.com/ans9868/portfolio?tab=readme-ov-file
 https://reactfolio.tharindu.dev/

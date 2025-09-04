@@ -1,16 +1,18 @@
 import React, { useState } from 'react';
 import Slider from '../components/UI/Slider';
+// TODO add docker/singularity as well as a slider for it and also add my medium.org post
 
 export default function About() {
   const [coffee, setCoffee] = useState(1);
   const [wizardry, setWizardry] = useState(0);
   const [productivity, setProductivity] = useState({
-    js: 30,
+    js: 35,
     python: 55,
-    pyspark: 40,
-    ml: 30,
+    pyspark: 55,
+    ml: 35,
     fullstack: 60,
     cpp: 30,
+    docker: 45,
   });
 
   function randomProductivity() {
@@ -21,6 +23,7 @@ export default function About() {
       ml: Math.floor(Math.random() * 51) + 10,
       js: Math.floor(Math.random() * 51) + 10,
       cpp: Math.floor(Math.random() * 51) + 10,
+      docker: Math.floor(Math.random() * 51) + 10,
     };
   }
 
@@ -34,6 +37,7 @@ export default function About() {
         ml: 30,
         fullstack: 60,
         cpp: 30,
+        docker: 45,
       });
       return;
     }
@@ -46,6 +50,7 @@ export default function About() {
         ml: 35,
         fullstack: 55,
         cpp: 30,
+        docker: 40,
       });
       return;
     }
@@ -144,6 +149,13 @@ export default function About() {
               <span className="skill-value">{productivity.cpp.toFixed(1)}%</span>
               <div className="bar-bg">
                 <div className="bar-fill cpp" style={{width: `${productivity.cpp}%`}}></div>
+              </div>
+            </div>
+            <div className="skill-bar">
+              <span className="skill-label">Docker & Singularity</span>
+              <span className="skill-value">{productivity.docker.toFixed(1)}%</span>
+              <div className="bar-bg">
+                <div className="bar-fill docker" style={{width: `${productivity.docker}%`}}></div>
               </div>
             </div>
             <div className="skill-bar skill-note">

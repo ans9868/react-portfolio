@@ -257,6 +257,7 @@ main {
 .bar-fill.ml { width: 80%; background: #ffd54f; }
 .bar-fill.fullstack { width: 90%; background: #aed581; }
 .bar-fill.cpp { width: 75%; background: #ef9a9a; }
+.bar-fill.docker { width: 85%; background: #2496ed; }
 
 /* Isolated Slider Component Styles */
 .sliders-section {
@@ -440,6 +441,7 @@ main {
 .bar-fill.ml { background: #ffd54f; }
 .bar-fill.fullstack { background: #aed581; }
 .bar-fill.cpp { background: #ef9a9a; }
+.bar-fill.docker { background: #2496ed; }
 
 .contact-section {
   max-width: 600px;
