@@ -258,7 +258,8 @@ main {
 .bar-fill.fullstack { width: 90%; background: #aed581; }
 .bar-fill.cpp { width: 75%; background: #ef9a9a; }
 
-.coffee-slider-section.coffee, .coffee-slider-section.imposter, .coffee-slider-section.wizardry {
+/* Isolated Slider Component Styles */
+.sliders-section {
   max-width: 500px;
   width: 100%;
   margin: 2.5rem 0 0 0;
@@ -266,32 +267,105 @@ main {
   text-align: left;
 }
 
-.coffee-slider-section.coffee label,
-.coffee-slider-section.imposter label {
+.slider-container {
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.slider-label {
   font-size: 1.1rem;
   color: #444;
   font-weight: 600;
-  margin-bottom: 0.0rem;
+  margin-bottom: 0.5rem;
   display: block;
+  line-height: 1.4;
 }
-.coffee-slider-section.coffee .coffee-slider,
-.coffee-slider-section.imposter .coffee-slider {
+
+.slider-input {
   width: 100%;
-  margin-top: 0.0rem;
-  margin-bottom: 0.0rem;
-  accent-color: #b39ddb;
   height: 24px;
-  padding-bottom: 0.5rem;
-  box-sizing: content-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
 }
-.coffee-slider-section.wizardry .coffee-slider {
-  width: 100%;
-  margin-top: 0.0rem;
-  margin-bottom: 0.0rem;
-  accent-color: #b39ddb;
-  height: 24px;
-  padding-bottom: 0.5rem;
-  box-sizing: content-box;
+
+/* WebKit browsers (Chrome, Safari, Edge) */
+.slider-input::-webkit-slider-track {
+  background: #e0e0e0;
+  height: 6px;
+  border-radius: 3px;
+  border: none;
+  box-shadow: none;
+}
+
+.slider-input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  background: #b39ddb;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  margin-top: -7px; /* Centers thumb on track */
+}
+
+/* Firefox */
+.slider-input::-moz-range-track {
+  background: #e0e0e0;
+  height: 6px;
+  border-radius: 3px;
+  border: none;
+  box-shadow: none;
+}
+
+.slider-input::-moz-range-thumb {
+  background: #b39ddb;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Ensure consistent track appearance across all browsers */
+.slider-input::-webkit-slider-runnable-track {
+  background: #e0e0e0;
+  height: 6px;
+  border-radius: 3px;
+  border: none;
+  box-shadow: none;
+}
+
+/* Specific slider variants */
+.slider-container.coffee-slider .slider-input {
+  accent-color: #8d6e63;
+}
+
+.slider-container.coffee-slider .slider-input::-webkit-slider-thumb {
+  background: #8d6e63;
+}
+
+.slider-container.coffee-slider .slider-input::-moz-range-thumb {
+  background: #8d6e63;
+}
+
+.slider-container.wizardry-slider .slider-input {
+  accent-color: #7b1fa2;
+}
+
+.slider-container.wizardry-slider .slider-input::-webkit-slider-thumb {
+  background: #7b1fa2;
+}
+
+.slider-container.wizardry-slider .slider-input::-moz-range-thumb {
+  background: #7b1fa2;
 }
 
 .about-two-col {

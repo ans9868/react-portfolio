@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Slider from '../components/UI/Slider';
 
 export default function About() {
   const [coffee, setCoffee] = useState(1);
@@ -70,10 +71,9 @@ export default function About() {
         <div className="about-left">
           <h2 className="about-title">What I Do?</h2>
           <p className="about-desc">
-          <p className="about-desc">
              I am very curious and a very quick learner. Sometimes I get so excited about a new idea that I just have to try it out.
-            
-          </p> Currently, I'm studying Computer Science at&nbsp;
+            <br /><br />
+            Currently, I'm studying Computer Science at&nbsp;
           <strong className="extra-bold">
               <a
                 href="https://engineering.nyu.edu/about/assessment-and-institutional-research/abet-graduation-retention-and-enrollment#graduation-rates"
@@ -152,33 +152,25 @@ export default function About() {
               * I'm optimal at 1 cup of coffee and 100% wizardry.
             </div>
           </div>
-          <div className="coffee-slider-section coffee">
-            <label htmlFor="coffee-slider" className="skill-label">
-              Number of cups of coffee I have had today: <b>{coffee}</b>
-            </label>
-            <input
+          <div className="sliders-section">
+            <Slider
               id="coffee-slider"
-              type="range"
-              min="1"
-              max="10"
+              label={`Number of cups of coffee I have had today: ${coffee}`}
+              min={1}
+              max={10}
               value={coffee}
               onChange={handleCoffeeSlider}
               className="coffee-slider"
             />
-          </div>
-          <div className="coffee-slider-section wizardry">
-            <label htmlFor="wizardry-slider" className="skill-label">
-              Wizardry Level: <b>{wizardry.toFixed(1)}%</b>
-            </label>
-            <input
+            <Slider
               id="wizardry-slider"
-              type="range"
-              min="0"
-              max="100"
-              step="0.5"
+              label={`Wizardry Level: ${wizardry.toFixed(1)}%`}
+              min={0}
+              max={100}
+              step={0.5}
               value={wizardry}
               onChange={handleWizardrySlider}
-              className="coffee-slider"
+              className="wizardry-slider"
             />
           </div>
         </div>
