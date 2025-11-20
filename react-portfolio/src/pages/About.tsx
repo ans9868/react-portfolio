@@ -6,13 +6,14 @@ export default function About() {
   const [coffee, setCoffee] = useState(1);
   const [wizardry, setWizardry] = useState(0);
   const [productivity, setProductivity] = useState({
-    js: 35,
+    js: 30,
     python: 55,
-    pyspark: 55,
-    ml: 35,
+    pyspark: 40,
+    ml: 30,
     fullstack: 60,
     cpp: 30,
     docker: 45,
+    ray: 40,
   });
 
   function randomProductivity() {
@@ -24,6 +25,7 @@ export default function About() {
       js: Math.floor(Math.random() * 51) + 10,
       cpp: Math.floor(Math.random() * 51) + 10,
       docker: Math.floor(Math.random() * 51) + 10,
+      ray: Math.floor(Math.random() * 51) + 10,
     };
   }
 
@@ -38,6 +40,7 @@ export default function About() {
         fullstack: 60,
         cpp: 30,
         docker: 45,
+        ray: 40,
       });
       return;
     }
@@ -46,11 +49,12 @@ export default function About() {
       setProductivity({
         js: 45,
         python: 40,
-        pyspark: 35,
+        pyspark: 40,
         ml: 35,
         fullstack: 55,
         cpp: 30,
         docker: 40,
+        ray: 30,
       });
       return;
     }
@@ -88,7 +92,7 @@ export default function About() {
                 NYU Tandon School of Engineering
               </a>
           </strong>
-          , where I will be graduating in May of 2026. (That's on time—which which is a miracle. Classes are hard + we get no vacation. Only half of my class is graduating on time—
+          , where I will be graduating in May of 2026. (That's on time—which is in itself an accomplishment. Classes are hard + we get no vacation. Only half of my class is graduating on time—
           <a
             href="https://engineering.nyu.edu/about/assessment-and-institutional-research/abet-graduation-retention-and-enrollment#graduation-rates"
             target="_blank"
@@ -103,7 +107,10 @@ export default function About() {
             <strong><a href="https://fullstackopen.com/en/" target="_blank" rel="noopener noreferrer">Full Stack Web Development Certificate (University of Helsinki)</a></strong> 
              &nbsp;and&nbsp;
             <strong><a href="https://engineering.nyu.edu/life-tandon/tandon-career-hub/resources-students/data-science-bootcamp" target="_blank" rel="noopener noreferrer">Data Science Bootcamp Certificate (NYU Tandon)</a></strong>.
-            Both of them were pretty tough, but we did it 🥳.
+            Both of them were pretty tough, but we did it 🥳. 
+            <br /><br />
+            <br /><br />
+            Also feel free to play with my productivity meters with my coffee and wizardry sliders on the right.➡ ️ 
             <br /><br />
           </p>
         </div>
@@ -135,6 +142,13 @@ export default function About() {
               <span className="skill-value">{productivity.pyspark.toFixed(1)}%</span>
               <div className="bar-bg">
                 <div className="bar-fill pyspark" style={{width: `${productivity.pyspark}%`}}></div>
+              </div>
+            </div>
+            <div className="skill-bar">
+              <span className="skill-label">Ray (ML)</span>
+              <span className="skill-value">{productivity.ray.toFixed(1)}%</span>
+              <div className="bar-bg">
+                <div className="bar-fill ray" style={{width: `${productivity.ray}%`}}></div>
               </div>
             </div>
             <div className="skill-bar">
