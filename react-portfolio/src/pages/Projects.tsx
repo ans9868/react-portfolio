@@ -25,7 +25,7 @@ const projects = [
   {
     title: "Database Project: Château NYC",
     description: "A full-stack web application with a modern UI and robust backend. This was a project for a Database course at NYU. Features include user authentication, data management, and real-time updates.",
-    githubUrl: "https://github.com/TheChosenO1/DBProject",
+    githubUrl: "https://github.com/ans9868/ChateauNYC",
     technologies: ["React", "Node.js", "Express", "JEST", "CSS", "JavaScript", "A lot of Postgres"]
   },
   {
