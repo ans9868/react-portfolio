@@ -497,6 +497,21 @@ main {
   text-align: left;
 }
 
+/* Clickable Card Wrapper Styles */
+.project-card-link,
+.blog-post-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  height: 100%;
+  cursor: pointer;
+}
+
+.project-card-link:hover,
+.blog-post-card-link:hover {
+  color: inherit;
+}
+
 /* Project Card Styles */
 .project-card {
   background: #fff;

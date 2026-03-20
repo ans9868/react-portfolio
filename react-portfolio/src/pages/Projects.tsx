@@ -1,11 +1,11 @@
 import ProjectCard from '../components/UI/ProjectCard';
-import eegPipelineImage from '../assets/EEG-pipeline-structure.png';
+import eegPipelineImage from '../assets/distributed_pipeline.png';
 
 const projects = [
   {
-    title: "EEG ML Pipeline: Honest Cross-Subject Generalization",
-    description: "A distributed PySpark + Ray pipeline implementing 50-fold random Leave-P-Subjects-Out (LPSO) evaluation for honest cross-subject generalization. On 65 AD/CN subjects, ANOVA-selected features outperform PCA by ~15-16 pts (69.5% vs 53.2% median) under strict cross-subject evaluation. A statistically rigorous, reproducible EEG benchmark that prevents the 'lucky fold' illusion through median ± IQR reporting.",
-    docUrl: "https://docs.google.com/document/d/1QT2ikn4bp6Gq5iCia0xJMgnyQE1JCNyiYEHrBBLmhVk/edit?tab=t.0#heading=h.a97vqin83eo3",
+    title: "Flaws in EEG Alzheimer's ML: Memorization, Lucky Folds, and Metric Misalignment",
+    description: "Most EEG Alzheimer's studies report >90% accuracy that collapses under proper cross-subject evaluation. This preprint formalizes three evaluation traps and proposes reporting standards for the field. The analysis required a distributed PySpark + Ray pipeline executing thousands of independent experiments across NYU's Greene HPC cluster.",
+    docUrl: "https://zenodo.org/records/19030142",
     imageUrl: eegPipelineImage,
     technologies: ["Python", "PySpark", "Ray", "ML", "EEG", "ANOVA", "PCA", "LPSO", "Scikit-learn", "Pandas", "Numpy", "Distributed Computing", "Reproducible Research"]
   },
