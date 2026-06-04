@@ -1,4 +1,6 @@
 
+import pinnedIcon from '../../assets/pinned.png';
+
 interface ProjectCardProps {
   title: string;
   description: string;
@@ -6,10 +8,11 @@ interface ProjectCardProps {
   docUrl?: string;
   mediumUrl?: string;
   imageUrl?: string;
+  pinned?: boolean;
   technologies?: string[];
 }
 
-export default function ProjectCard({ title, description, githubUrl, docUrl, mediumUrl, imageUrl, technologies = [] }: ProjectCardProps) {
+export default function ProjectCard({ title, description, githubUrl, docUrl, mediumUrl, imageUrl, pinned = false, technologies = [] }: ProjectCardProps) {
   // Primary link: prioritize docUrl > mediumUrl > githubUrl
   const primaryUrl = docUrl || mediumUrl || githubUrl;
 
@@ -21,6 +24,13 @@ export default function ProjectCard({ title, description, githubUrl, docUrl, med
       className="project-card-link"
     >
       <div className="project-card">
+        {pinned && (
+          <img
+            src={pinnedIcon}
+            alt="Pinned"
+            className="project-pinned-icon"
+          />
+        )}
         <h3 className="project-title">{title}</h3>
         {imageUrl && (
           <img 

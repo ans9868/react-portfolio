@@ -8,7 +8,8 @@ export default function Navbar() {
       <div className={styles.navlinks}>
         <NavLink to="/" end className={({ isActive }) => isActive ? `${styles.navlink} ${styles.active}` : styles.navlink}>Home</NavLink>
         <NavLink to="/about" className={({ isActive }) => isActive ? `${styles.navlink} ${styles.active}` : styles.navlink}>About</NavLink>
-        <NavLink to="/projects" className={({ isActive }) => isActive ? `${styles.navlink} ${styles.active}` : styles.navlink}>Projects</NavLink>
+        <NavLink to="/research" className={({ isActive }) => isActive ? `${styles.navlink} ${styles.active}` : styles.navlink}>Research</NavLink>
+        <NavLink to="/engineering" className={({ isActive }) => isActive ? `${styles.navlink} ${styles.active}` : styles.navlink}>Engineering</NavLink>
         <NavLink to="/articles" className={({ isActive }) => isActive ? `${styles.navlink} ${styles.active}` : styles.navlink}>Blog</NavLink>
         <NavLink to="/contact" className={({ isActive }) => isActive ? `${styles.navlink} ${styles.active}` : styles.navlink}>Contact</NavLink>
       </div>

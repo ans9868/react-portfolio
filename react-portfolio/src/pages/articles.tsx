@@ -3,8 +3,15 @@ import youtube from '../assets/logos/youtube.png';
 import BlogPostPreview from '../components/UI/blogpost-preview';
 import macosTerminalImage from '../assets/medium_article_pictures/macos_terminal_setup.webp';
 import xApiImage from '../assets/medium_article_pictures/x_api_v_2.webp';
+import pysparkHpcImage from '../assets/medium_article_pictures/pyspark_docker_singularity_hpc.webp';
 
 const blogPosts = [
+  {
+    title: "How You Can Make PySpark Work Across Docker, Singularity, and HPC",
+    description: "A practical guide to making PySpark run consistently across local Docker containers, Singularity images, and HPC environments without rewriting your workflow for each platform.",
+    url: "https://medium.com/@adelnsahuc/how-you-can-make-pyspark-work-across-docker-singularity-and-hpc-890f55970c51",
+    imageUrl: pysparkHpcImage
+  },
   {
     title: "Analyzing Geographic Culture Through X API v2 + British LLM",
     description: "Explore how to analyze geographic culture through X (Twitter) API v2. This article covers data collection, sentiment analysis with NLTK VADER, topic profiling with Empath, and dimensionality reduction techniques to compare regional cultural profiles.",
